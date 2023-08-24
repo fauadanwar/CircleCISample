@@ -1,3 +1,6 @@
+# CircleCI configuration file
+version: 2.1
+
 jobs: # a basic unit of work in a run
   test: # your job name
     macos:
@@ -6,7 +9,7 @@ jobs: # a basic unit of work in a run
       - checkout  # pull down code from your version control system.
       - run:
           name: Run Unit Tests
-          command: xcodebuild test -scheme CircleCISample
+          command: xcodebuild test -scheme CircleCISample/CircleCISample
   build: 
     macos:
       xcode: 14.3.1 # indicate our selected version of Xcode
