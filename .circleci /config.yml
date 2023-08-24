@@ -1,4 +1,4 @@
-version: 1.0
+version: 2.1
 
 jobs: # a basic unit of work in a run
   test: # your job name
