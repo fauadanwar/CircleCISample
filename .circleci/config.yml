@@ -9,7 +9,7 @@ jobs: # a basic unit of work in a run
       - checkout  # pull down code from your version control system.
       - run:
           name: Run Unit Tests
-          command: xcodebuild test -scheme CircleCISample
+          command: xcodebuild test -scheme CircleCISample/CircleCISample
   build: 
     macos:
       xcode: 14.1.0 # indicate our selected version of Xcode
