@@ -11,7 +11,7 @@ jobs: # a basic unit of work in a run
     steps: # a series of commands to run
       - checkout  # pull down code from your version control system.
       - run: bundle install
-            - run:
+      - run:
           name: Install Cocoa Pods
           command: pod install --verbose
       - run:
