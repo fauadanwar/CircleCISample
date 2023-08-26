@@ -29,17 +29,9 @@ jobs: # a basic unit of work in a run
           path: result.xml
       - store_test_results:
           path: result.xml
-
-  danger:
-    docker:
-      - image: dantoml/danger:latest
-    steps:
-      - checkout
-      - run: danger
       
 workflows:
   test_build:
     jobs:
       - swiftlint
-      - danger
       - build-and-test
