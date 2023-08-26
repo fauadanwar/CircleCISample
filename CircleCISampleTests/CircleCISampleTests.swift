@@ -19,7 +19,7 @@ final class CircleCISampleTests: XCTestCase {
     }
     
     func testDisplayName() throws {
-        let contectView = ContentView(displayName: "HelloTest")
+        let contectView = ContentView(displayName: "Hello Test")
         XCTAssertEqual(contectView.displayName, "Hello Test", "The name dose not match")
     }
 }
