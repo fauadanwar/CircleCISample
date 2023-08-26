@@ -2,18 +2,15 @@
 version: 2.1
 
 jobs: # a basic unit of work in a run
-  build_and_test: # your job name
+  build-and-test: # your job name
     macos:
       xcode: 14.3.1 # indicate our selected version of Xcode
     environment:
-    FL_OUTPUT_DIFR: output
-    FASTLANE_LANE: test
+      FL_OUTPUT_DIFR: output
+      FASTLANE_LANE: test
     steps: # a series of commands to run
       - checkout  # pull down code from your version control system.
       - run: bundle install
-      - run:
-          name: Install Cocoa Pods
-          command: pod install --verbose
       - run:
           name: Fastlane
           command: bundle exec fastlane $FASTLANE_LANE  
@@ -24,4 +21,4 @@ jobs: # a basic unit of work in a run
 workflows:
   test_build:
     jobs:
-      - build_and_test
+      - build-and-test
